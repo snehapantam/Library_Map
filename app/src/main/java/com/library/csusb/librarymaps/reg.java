@@ -28,8 +28,6 @@ class reg {
     String re3 = "(\\d+)";// Integer Number 1
 
     String shelf = "";
-
-
     Pattern p = Pattern.compile(re1 + re2 + re3, Pattern.CASE_INSENSITIVE | Pattern.DOTALL);
     List<String[]> result= new ArrayList<String[]>();
     List<String> shelf_list = new ArrayList<>();
