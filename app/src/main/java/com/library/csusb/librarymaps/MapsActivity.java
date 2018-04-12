@@ -1,6 +1,7 @@
 package com.library.csusb.librarymaps;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -11,6 +12,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
@@ -107,7 +110,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
         LatLng library = new LatLng(34.182599, -117.324019);
-         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(library, 20));
+         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(library, 12));
 
 
         GroundOverlayOptions fpOverlay = new GroundOverlayOptions()
@@ -143,9 +146,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addGroundOverlay(fpOverlay);
 
 
+
      mMap.addMarker(new MarkerOptions().position(book));
 
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(book, 20));
+
 
 
 

@@ -31,7 +31,7 @@ public class Background extends AsyncTask<String, Void, String> {
 
 
     Context context;
-    String url = "http://10.0.2.2/android/get.php";
+    String url = "http://10.0.2.2/android/get_data.php";
     String s;
     String jsonObject;
     reg reg = new reg(context);

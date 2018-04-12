@@ -25,8 +25,7 @@ import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity {
-    reg reg = new reg(this);
-
+Validate validate= new Validate();
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void onCreate(Bundle savedInstanceState) {
@@ -44,7 +43,10 @@ public class MainActivity extends AppCompatActivity {
 
 
                 System.out.print("Calling from main");
-                boolean res = reg.validate(query);
+                boolean res = validate.validate(query);
+
+
+
 
 
                 if (res == true) {
